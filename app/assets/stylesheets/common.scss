@@ -1,0 +1,215 @@
+html {
+    background-color: rgb(200, 225, 200);
+}
+
+body {
+    // デフォルトの余白
+    margin: 0;
+}
+
+h1 {
+    background-color: rgb(24, 24, 116);
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    // デフォルトの余白
+    margin:0;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+.link {
+    text-decoration: none;
+    color:inherit;
+}
+
+.button {
+    background-color:#c6f6f3;
+    border-radius: 10%;
+    padding:10px;
+    color:rgb(97, 96, 103);
+    transition: 0.3s;
+}
+
+.button:hover {
+    filter: brightness(0.8);
+}
+
+.top-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap:600px;
+}
+
+.notice {
+    margin-left: 22%;
+}
+
+// .top-list h3 {
+//     margin-left: 325px;
+// }
+
+// .top-list p {
+//     margin-right: 350px;
+// }
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: var(--bs-gutter-x,.75rem);
+}
+
+thead th {
+    text-align: left;
+    padding-right: 20px;
+    background: #778ca3;
+    color: #ffffff;
+}
+
+tbody tr {
+    background-color: #c6f6f3;
+}
+
+tbody tr:nth-child(2n+1) {
+    background: #e9faf9;
+}
+
+tbody td {
+    text-align: left;
+    padding-right: 20px;
+}
+
+.count {
+    position: relative;
+    margin-top:30px;
+    display: flex;
+    justify-content: center;
+    gap:430px;
+}
+.count-background {
+    z-index:-1;
+    height:80px;
+    width:760px;
+    padding-bottom:10px;
+    position: absolute;
+    background-color: #c6f6f3;
+}
+// 新規、編集
+
+.each-post {
+    width: 50%;
+    max-width: 100%;
+    margin: 10px auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #e9faf9;
+    border-radius: 4px;
+    padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: var(--bs-gutter-x,.75rem);
+    line-height: 1;
+}
+
+.each-post > div {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.each-post-content {
+    // margin-left: 77px;
+    text-align: center;
+}
+
+.each-post-content p {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.text {
+    text-align: left;
+    margin-left:30%;
+}
+
+.form-controll{
+    width:80%;
+}
+
+.date {
+    display: flex;
+    justify-content: left;
+    margin-left: 30%;
+    gap:20px;
+}
+
+.save {
+    display: flex;
+    justify-content: right;
+    margin-right: 30%;
+    gap:20px;
+}
+
+.cansell {
+    background-color: #e9faf9;
+    border: 1px solid #95adc7;
+}
+
+.button-save {
+    border:none;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+// 詳細
+.back {
+    margin-bottom:0;
+    display: inline-block;
+    margin-left: 20%;
+}
+.div-show {
+    text-align: right;
+    margin-top:0;
+    margin-right:30%;
+}
+.show-edit {
+    display: inline-block;
+}
+.show-table th {
+    padding:5px 10px;
+    background-color: #778ca3;
+}
+.show-table td {
+    padding:5px 10px;
+}
+
+// タブレット
+@media(max-width: 1024px) {
+    .notice {
+        margin-left: 10%;
+    }
+    .top-list {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap:600px;
+    }
+
+    // 新規、編集
+    .each-post {
+        width:80%;
+    }
+    .date {
+        display: block;
+        text-align: left;
+        margin-left:30%;
+    }
+}
+
+@media(max-width: 767px) {
+    .top-list {
+        gap:70%;
+    }
+    .count {
+        gap:50%;
+    }
+}

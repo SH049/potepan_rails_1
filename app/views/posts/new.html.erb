@@ -1,0 +1,40 @@
+<h3 class="back">新規追加</h3>
+
+<%= render "shared/error", obj: @post %>
+
+<%= form_with model: @post do |f| %>
+  <div class="each-post">
+    <div class="each-post-content text">
+      <p><%= f.label :title ,"タイトル" %></p>
+      <p class="form-controll"><%= f.text_field :title %></p>
+    </div>
+
+    <div class="date">
+      <div>
+        <p><%= f.label :start_date ,"開始日" %></p>
+        <p><%= f.date_field :start_date %></p>
+      </div>
+      <div>
+        <p><%= f.label :end_date ,"終了日" %></p>
+        <p><%= f.date_field :end_date %></p>
+      </div>
+    </div>
+
+    <div class="each-post-content text">
+      <p><%= f.check_box :checkbox, id: :checkbox,:as => :boolean %>
+      <%= label_tag :checkbox, "終日の場合はチェックを入れます" %></p>
+    </div>
+
+    <div class="each-post-content text">
+      <p><%= f.label :content ,"スケジュールメモ" %></p>
+      <p><%= f.text_area :content %></p>
+    </div>
+
+    <div class="save">
+      <p class="button cansell"><%= link_to "キャンセル", :posts, class:"link" %></p>
+      <p><%= f.submit "保存", class:"button button-save" %></p>
+  </div>
+
+  </div>
+
+<% end %>
